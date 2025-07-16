@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Проверка на плагиат</title>
+</head>
+<body>
+    <h2>Сервис проверки текста на плагиат</h2>
+    <form method="POST">
+        <textarea name="text1" rows="8" cols="50" placeholder="Введите первый текст..."></textarea><br><br>
+        <textarea name="text2" rows="8" cols="50" placeholder="Введите второй текст..."></textarea><br><br>
+        <input type="submit" value="Проверить">
+    </form>
+
+    {% if result is not none %}
+        <h3>Совпадение: {{ result }}%</h3>
+    {% endif %}
+</body>
+</html>
